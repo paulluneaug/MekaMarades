@@ -7,6 +7,10 @@ public class ArduinoConnectorManager : MonoBehaviour
 {
     [SerializeField] private ArduinoConnector m_sensorConnector;
 
+    [NonSerialized] private int m_sensorDistance = 0;
+
+    public int SensorDistance => m_sensorDistance;
+
     void Start()
     {
         m_sensorConnector.Init();
@@ -19,13 +23,12 @@ public class ArduinoConnectorManager : MonoBehaviour
         m_sensorConnector.Close();
     }
 
-    private void OnSensorMessageRecieved(string obj)
+    private void OnSensorMessageRecieved(byte[] buffer, int recievedBytesCount)
     {
     }
 
     [ContextMenu("PING")]
     private void Ping()
     {
-        m_sensorConnector.Send("PING");
     }
 }

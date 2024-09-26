@@ -7,12 +7,15 @@ using UnityEngine;
 [Serializable]
 public class ArduinoConnector
 {
-    public event Action<string> OnMessageRecieved;
+    private const int BUFFER_SIZE = 32;
+
+    public event Action<byte[], int> OnMessageRecieved;
 
     [SerializeField] private string m_port;
     [SerializeField] private int m_baud;
 
-    private SerialPort m_serialPort;
+    [NonSerialized] private SerialPort m_serialPort;
+    [NonSerialized] private byte[] m_buffer;
 
     public void Init()
     {
@@ -20,6 +23,8 @@ public class ArduinoConnector
         {
             Debug.Log($"   {s}");
         }
+
+        m_buffer = new byte[BUFFER_SIZE];
 
         m_serialPort = new SerialPort(m_port, m_baud);
         m_serialPort.ReadTimeout = 50;
@@ -38,34 +43,32 @@ public class ArduinoConnector
         m_serialPort.Close();
     }
 
-    public void Send(string message)
+    public void Send(byte[] buffer)
     {
-        byte[] buffer = new byte[10];
-        m_serialPort.BaseStream.Write(buffer, 0, 10);
+        m_serialPort.BaseStream.Write(buffer, 0, buffer.Length);
         //m_serialPort.WriteLine(message);
         m_serialPort.BaseStream.Flush();
-        Debug.Log($"Sending {message}");
+        Debug.Log($"Sent {buffer.Length} bytes");
     }
 
     private Task AwaitDatas()
     {
         while(true)
         {
-            string dataString = null;
+            int readBytesCount = 0;
             try
             {
-                //dataString = m_serialPort.ReadExisting();
-                dataString = m_serialPort.ReadLine();
+                readBytesCount = m_serialPort.Read(m_buffer, 0, BUFFER_SIZE);
             }
             catch (TimeoutException)
             {
-                dataString = null;
+                readBytesCount = 0;
             }
 
-            if (!string.IsNullOrEmpty(dataString))
+            if (readBytesCount != 0)
             {
-                Debug.Log($"Recieved : {dataString}");
-                OnMessageRecieved.Invoke(dataString);
+                Debug.Log($"Recieved {readBytesCount} bytes");
+                OnMessageRecieved.Invoke(m_buffer, readBytesCount);
             }
             Task.Delay(10);
         }
