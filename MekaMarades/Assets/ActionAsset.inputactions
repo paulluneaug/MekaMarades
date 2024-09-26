@@ -6,12 +6,21 @@
             "id": "bf8e879f-de5e-4e4a-8d1d-4bfca7c69d52",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Pump",
                     "type": "Button",
                     "id": "858aeafd-8b07-483a-8468-e92f523cbe30",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pedals",
+                    "type": "Button",
+                    "id": "18a18575-3c2b-449f-a6d5-054423a1b45d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 }
             ],
@@ -19,11 +28,33 @@
                 {
                     "name": "",
                     "id": "ce83bad3-5406-4ca8-8fad-8653741dbe55",
-                    "path": "",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Pump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd8ba9f4-32bf-4bc2-bd86-cbd1b051259e",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pedals",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d354dd53-451b-44ce-acd4-bf206527d12e",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pedals",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
