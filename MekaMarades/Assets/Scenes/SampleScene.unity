@@ -892,7 +892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e4e7ce33f613e48acc7870d139518e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fillingSpeed: 0.1
+  m_fillingSpeed: 1
   m_steeringWheelGame: {fileID: 2068476608}
 --- !u!1 &1166301309 stripped
 GameObject:
