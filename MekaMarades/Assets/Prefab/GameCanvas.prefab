@@ -118,8 +118,10 @@ MonoBehaviour:
   m_wheelAction: {fileID: -1506856747046011958, guid: 5f62b74e19745264b87ce33b61ae22a6, type: 3}
   m_needleSpeed: 0.1
   m_needleWidth: 5
-  m_scoringZoneSpeed: 1
+  m_scoringZoneSpeed: 0.1
   m_scoringZoneWidth: 15
+  m_minNextScoringZoneTime: 0.5
+  m_maxNextScoringZoneTime: 2
   m_needle: {fileID: 3529309309000533220}
   m_scoringZone: {fileID: 755273791924886885}
   m_backgroundZone: {fileID: 534310356650342294}
