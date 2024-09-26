@@ -43,15 +43,15 @@ public class ArduinoConnector
         m_serialPort.Close();
     }
 
-    public void Send(byte[] buffer)
+    public void Send(Span<byte> buffer)
     {
-        m_serialPort.BaseStream.Write(buffer, 0, buffer.Length);
+        m_serialPort.BaseStream.Write(buffer);
         //m_serialPort.WriteLine(message);
         m_serialPort.BaseStream.Flush();
         Debug.Log($"Sent {buffer.Length} bytes");
     }
 
-    private Task AwaitDatas()
+    private async Task AwaitDatas()
     {
         while(true)
         {
@@ -70,7 +70,7 @@ public class ArduinoConnector
                 //Debug.Log($"Recieved {readBytesCount} bytes");
                 OnMessageRecieved.Invoke(m_buffer, readBytesCount);
             }
-            Task.Delay(10);
+            await Task.Delay(20);
         }
     }
 }

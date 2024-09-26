@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityUtility.Timer;
 
@@ -41,19 +42,34 @@ public class DepthSensorGaugeFiller : GaugeFiller
 
     private bool CheckSensorDistance()
     {
+        Queue<byte> sensorDistances = m_arduinoManager.SensorDistances;
+
         if (!m_canShovel)
         {
+            sensorDistances.Clear();
             return false;
         }
-        float distance = m_arduinoManager.SensorDistance;
 
-        if (distance >= m_wallDefaultDistance)
+        byte readDistance;
+
+        bool found = false;
+
+        while (sensorDistances.TryDequeue(out readDistance))
         {
-            return false;
+            if (readDistance >= m_wallDefaultDistance)
+            {
+                continue;
+            }
+            Debug.Log($"Positive : {readDistance}");
+            found = true;
         }
 
-        m_timerBetweenShovels.Start();
-        m_canShovel = false;
-        return true;
+        if (found)
+        {
+            m_timerBetweenShovels.Start();
+            m_canShovel = false;
+            return true;
+        }
+        return false;
     }
 }
