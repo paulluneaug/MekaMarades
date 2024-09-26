@@ -25,6 +25,8 @@ public class ArduinoConnectorManager : MonoBehaviour
 
     private void OnSensorMessageRecieved(byte[] buffer, int recievedBytesCount)
     {
+        m_sensorDistance = buffer[0];
+        //Debug.Log($"Ditance = {m_sensorDistance}");
     }
 
     [ContextMenu("PING")]
