@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Wheel",
+                    "type": "Value",
+                    "id": "1f179b04-ee74-4909-b043-5db991105895",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -29,6 +38,17 @@
                     "name": "",
                     "id": "ce83bad3-5406-4ca8-8fad-8653741dbe55",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2310a3f1-ac45-496f-82d9-3ee4f703fe33",
+                    "path": "<HID::DragonRise Inc.   Generic   USB  Joystick  >/button8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -57,6 +77,72 @@
                     "action": "Pedals",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79c4d04d-b973-417b-a722-5ab7a531154b",
+                    "path": "<HID::Wired Wheel>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pedals",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "929e8e9f-fbd7-449d-a757-d298f523d06c",
+                    "path": "<HID::Wired Wheel>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pedals",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7dea630d-2946-4cdf-a0c3-922f9919e3cb",
+                    "path": "<HID::Wired Wheel>/stick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "015698a8-ae8d-4eb6-b69e-9283ad3ffd99",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Wheel",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "eae0c078-3b47-400f-ba9a-ed6821943a2a",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "27e1ff63-4d0e-49b0-b5ef-e7eb8e405ea9",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Wheel",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
