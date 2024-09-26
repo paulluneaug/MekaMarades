@@ -1,0 +1,34 @@
+{
+    "name": "ActionAsset",
+    "maps": [
+        {
+            "name": "Master",
+            "id": "bf8e879f-de5e-4e4a-8d1d-4bfca7c69d52",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "858aeafd-8b07-483a-8468-e92f523cbe30",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ce83bad3-5406-4ca8-8fad-8653741dbe55",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
