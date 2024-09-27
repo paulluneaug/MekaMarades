@@ -10,22 +10,17 @@ public class StartScript : MonoBehaviour
 {
     [SerializeField] private Image[] m_stars;
     [SerializeField] private InputActionReference[] m_actions;
-    [NonSerialized] private bool[] m_starsActive = { false, false, false, false };
     [SerializeField] private GameObject m_mainScene;
     [SerializeField] private GameObject m_startScene;
+
+    [SerializeField] private GameManager m_gameManager;
 
     [Header("other shit")]
     [SerializeField] private float m_wallDefaultDistance;
     [SerializeField] private ArduinoConnectorManager m_arduinoManager;
 
-    [Title("Global Decay Multiplier")]
-    [SerializeField] private float m_startGlobalDecay = 0.5f;
-    [SerializeField] private float m_startTimeBeforeDecay = 5.0f;
 
-    [SerializeField] private float m_globalDecayIncreaseAmount = 0.1f;
-    [SerializeField] private float m_globalDecayIncreaseTime = 10.0f;
-
-    [NonSerialized] private Coroutine m_globalDecayCoroutine;
+    [NonSerialized] private bool[] m_starsActive = { false, false, false, false };
 
 
     private void Update()
@@ -47,14 +42,6 @@ public class StartScript : MonoBehaviour
         StartGame();
     }
 
-    private void OnDestroy()
-    {
-        if (m_globalDecayCoroutine != null)
-        {
-            StopCoroutine(m_globalDecayCoroutine);
-        }
-    }
-
     private void ModuleActivated(int starNb)
     {
         m_stars[starNb].color = Color.white;
@@ -66,7 +53,7 @@ public class StartScript : MonoBehaviour
         m_mainScene.SetActive(true);
         m_startScene.SetActive(false);
 
-        m_globalDecayCoroutine = StartCoroutine(ManageGlobalDecay());
+        m_gameManager.StartGlobalDecay();
     }
 
     private bool CheckSensorDistance()
@@ -91,18 +78,5 @@ public class StartScript : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    private IEnumerator ManageGlobalDecay()
-    {
-        Gauge.GlobalDecayMultiplier = 0.0f;
-        yield return new WaitForSeconds(m_startTimeBeforeDecay);
-        Gauge.GlobalDecayMultiplier = m_startGlobalDecay;
-
-        while (true)
-        {
-            yield return new WaitForSeconds(m_globalDecayIncreaseTime);
-            Gauge.GlobalDecayMultiplier = m_globalDecayIncreaseAmount;
-        }
     }
 }
