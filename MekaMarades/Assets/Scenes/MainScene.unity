@@ -287,10 +287,10 @@ RectTransform:
   - {fileID: 1356691801}
   m_Father: {fileID: 1478577616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1440, y: -270}
-  m_SizeDelta: {x: 960, y: 540}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &181099959
 MonoBehaviour:
@@ -408,10 +408,10 @@ RectTransform:
   - {fileID: 384266015}
   m_Father: {fileID: 1478577616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480, y: -270}
-  m_SizeDelta: {x: 960, y: 540}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343827988
 MonoBehaviour:
@@ -1114,7 +1114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &621429487
 Transform:
   m_ObjectHideFlags: 0
@@ -1357,6 +1357,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SteeringWheelGauge
       objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c8eeab407d337c41a3b85404bb85f36, type: 3}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1367,19 +1383,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.896
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6297408
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.3702963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1473,7 +1489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18e4e7ce33f613e48acc7870d139518e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_fillingSpeed: 10
+  m_fillingSpeed: 1
   m_steeringWheelGame: {fileID: 1513728448}
 --- !u!1 &1166301309 stripped
 GameObject:
@@ -1671,6 +1687,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DepthSensorGauge
       objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 622508eb251d9b349ac7d1f2b6a3054a, type: 3}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1681,19 +1701,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.896
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6297408
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.3702963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1826,10 +1846,10 @@ RectTransform:
   - {fileID: 1299087808}
   m_Father: {fileID: 1478577616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1440, y: -810}
-  m_SizeDelta: {x: 960, y: 540}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310298178
 MonoBehaviour:
@@ -1844,7 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.10194911, b: 0.10194911, a: 1}
+  m_Color: {r: 0.9169811, g: 0.9169811, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2029,6 +2049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PedalsGauge
       objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2c14bcd5e24de94fb54ec4e4b8e82d0, type: 3}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2039,19 +2063,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.896
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6297408
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.3702963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2256,7 +2280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478577616}
   - component: {fileID: 1478577618}
-  - component: {fileID: 1478577617}
+  - component: {fileID: 1478577620}
   - component: {fileID: 1478577619}
   m_Layer: 5
   m_Name: GaugePanels
@@ -2288,30 +2312,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1478577617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1478577615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 960, y: 540}
-  m_Spacing: {x: 0, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
 --- !u!222 &1478577618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2340,6 +2340,32 @@ MonoBehaviour:
   m_minBrokenGauge: 2
   m_mainScene: {fileID: 621429486}
   m_endScene: {fileID: 1260419259}
+--- !u!114 &1478577620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478577615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1001 &1513728447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2434,7 +2460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7642506852382479650, guid: c5c83a4d5333b6e42b076f8ad0167ca2, type: 3}
       propertyPath: m_needleSpeed
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2650,7 +2676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1690014859
 Transform:
   m_ObjectHideFlags: 0
@@ -2848,10 +2874,10 @@ RectTransform:
   - {fileID: 844286789}
   m_Father: {fileID: 1478577616}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480, y: -810}
-  m_SizeDelta: {x: 960, y: 540}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799682794
 MonoBehaviour:
@@ -2866,7 +2892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.61273324, g: 0, b: 0.9339623, a: 1}
+  m_Color: {r: 0.8134519, g: 0, b: 0.82641506, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3208,6 +3234,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpGauge
       objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1af2bd1a9d9129846bdc4293b04b6d33, type: 3}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875591501385238510, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3218,19 +3256,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.896
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.6297408
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.104
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.3702963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100909435789721774, guid: 8a35b879e5ca6a14e82e02529a076477, type: 3}
       propertyPath: m_SizeDelta.x
