@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndScene : MonoBehaviour
 {
@@ -17,8 +18,7 @@ public class EndScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            m_startScene.SetActive(true);
-            m_endScene.SetActive(false);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
