@@ -7,6 +7,8 @@ public class Gauge : MonoBehaviour
 {
     public float CurrentFilling => m_currentFilling;
 
+    public static float GlobalDecayMultiplier = 0.5f;
+
     [SerializeField] private float m_decayRate;
     [SerializeField] private GaugeFiller m_filler;
 
@@ -31,7 +33,7 @@ public class Gauge : MonoBehaviour
             return;
         
         float deltaTime = Time.deltaTime;
-        float fillingDelta = m_filler.GetAdditionalFilling(deltaTime) - (deltaTime * m_decayRate);
+        float fillingDelta = m_filler.GetAdditionalFilling(deltaTime) - (deltaTime * m_decayRate * GlobalDecayMultiplier);
 
         m_currentFilling = Mathf.Clamp01(m_currentFilling + fillingDelta);
         
