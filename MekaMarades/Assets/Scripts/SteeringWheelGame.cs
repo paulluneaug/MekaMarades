@@ -85,12 +85,10 @@ public class SteeringWheelGame : MonoBehaviour
 
     private void FindNextScoringPosition(object _sender, ElapsedEventArgs _elapsedEventArgs)
     {
-        Debug.Log(m_scoringZoneNextPosition);
         m_scoringZoneTimer.Stop();
         m_scoringZoneNextPosition = m_random.NextFloat(0f, 1f);
         m_scoringZoneTimer.Interval = m_random.NextFloat(m_minNextScoringZoneTime, m_maxNextScoringZoneTime);
         m_scoringZoneTimer.Start();
-        Debug.Log(m_scoringZoneNextPosition);
     }
 
     private void MoveCursor(float speed)

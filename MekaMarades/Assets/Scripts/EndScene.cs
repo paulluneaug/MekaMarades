@@ -1,0 +1,28 @@
+using TMPro;
+using UnityEngine;
+
+public class EndScene : MonoBehaviour
+{
+    [SerializeField] private TextMeshProUGUI score;
+    
+    [SerializeField] private GameObject m_startScene;
+    [SerializeField] private GameObject m_endScene;
+
+    void Start()
+    {
+        score.text = "Score : " + ScoreManager.Score;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            m_startScene.SetActive(true);
+            m_endScene.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+}
