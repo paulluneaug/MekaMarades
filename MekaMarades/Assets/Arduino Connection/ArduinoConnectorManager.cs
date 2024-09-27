@@ -14,6 +14,8 @@ public class ArduinoConnectorManager : MonoBehaviour
     public Queue<byte> SensorDistances => m_sensorDistances;
 
     [SerializeField] private ArduinoConnector m_sensorConnector;
+    [SerializeField] private byte m_commandChannel;
+    [SerializeField] private byte m_commandValue;
 
     [NonSerialized] private Queue<byte> m_recievedDatas;
 
@@ -134,10 +136,40 @@ public class ArduinoConnectorManager : MonoBehaviour
         StartCoroutine(Flicker(DMXChannelsGlossary.DIMMER_1_CHANNEL, 2.0f, true));
     }
 
-    [ContextMenu("Command")]
-    private void SendCommand()
+    [ContextMenu("Command Dimmer 1 ")]
+    private void SendCommandDimmer1()
     {
-        SendDMXCommand(DMXChannelsGlossary.DIMMER_3_CHANNEL, 255);
+        SendDMXCommand(DMXChannelsGlossary.DIMMER_1_CHANNEL, m_commandValue);
+    }
+
+    [ContextMenu("Command Dimmer 2 ")]
+    private void SendCommandDimmer2()
+    {
+        SendDMXCommand(DMXChannelsGlossary.DIMMER_2_CHANNEL, m_commandValue);
+    }
+
+    [ContextMenu("Command Light Dimmer")]
+    private void SendCommandLightDimmer()
+    {
+        SendDMXCommand(DMXChannelsGlossary.LIGHT_DIMMER_CHANNEL, m_commandValue);
+    }
+
+    [ContextMenu("Command Light Tilt")]
+    private void SendCommandLightTilt()
+    {
+        SendDMXCommand(DMXChannelsGlossary.LIGHT_TILT_CHANNEL, m_commandValue);
+    }
+
+    [ContextMenu("Command Light Pan")]
+    private void SendCommandLightPan()
+    {
+        SendDMXCommand(DMXChannelsGlossary.LIGHT_PAN_CHANNEL, m_commandValue);
+    }
+
+    [ContextMenu("Command Custom")]
+    private void SendCommandCustom()
+    {
+        SendDMXCommand(m_commandChannel, m_commandValue);
     }
 
 }
